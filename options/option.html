@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+</head>
+<script>
+    const firebaseConfig = {
+        apiKey: "AIzaSyAFJFmzKwCADs9lnn3-58eZU1qvvrtBnpk",
+        authDomain: "lms-smit.firebaseapp.com",
+        projectId: "lms-smit",
+        storageBucket: "lms-smit.appspot.com",
+        messagingSenderId: "634965974416",
+        appId: "1:634965974416:web:22a46fbe6147c1f34ca715",
+        measurementId: "G-ZBF4NNQM8M"
+    };
+
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    // const analytics = getAnalytics(app);
+    
+</script>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        background-image: url(images/saylani.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        
+    }
+    .cont{
+        background-color: rgba(252, 255, 255, 0.7);
+        height: auto;
+      
+    }
+  
+    .row1{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    input[type=text],[type=email],[type=password],select{
+        background-color: rgba(252, 255, 255, 0.7);
+    }
+</style>
+<body>
+    <div class="container-fluid-lg cont">
+        <!-- Navigation bar start -->
+            <div class="navbar navbar-light navbar-expand-md" style="background-color: rgba(177, 182, 182, 0.4);">
+                <ul class="navbar-nav">
+                    <li class="nav-item text-center text-primaray">
+                        <a class="navbar-brand nav-link text-center h1 text-primary" href="#">
+                           SM<font class="text-success">I</font>T
+                        </a>
+                    </li>
+                </ul>  
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav ml-auto text-center">
+                        <li class="nav-item">
+                            <a class="nav-link active mr-3" aria-current="page" href="../index.html"> Home </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+        <!-- Navigation bar end -->
+    
+    
+        <div class="container-fluid">
+            <h1 class="text-center"> Select the Field</h1>
+            <!-- start row -->
+            <div class="row text-center">
+            
+                <div class="col-lg-4 col-md-4 col-sm-12 mt-3" >
+
+                    <div class="card" style="background-color: rgba(177, 182, 182, 0.4);">
+                        <h5 class="card-title mt-3">Web Developer</h5>
+                        <hr>
+                        <img src="images/webdeveloper.jfif" style="height: 250px; opacity: 0.5;" class="card-img-top" alt="...">
+                        
+                        <div class="card-body">
+                            <p class="card-text"><strong>If you are student of Web Wevelopment so click below and sign in or sign up </strong></p>
+                        
+                            <button class="btn">
+                                <a href="#" class="btn btn-info" data-toggle="modal" data-target="#signin12">Sign In</a>
+                            </button>
+                            <button class="btn">
+                                <a href="#" class="btn btn-info" data-toggle="modal" data-target="#signup12">Sign Up</a>
+                            </button>
+
+                        </div>
+                    </div>
+
+                </div>
+                
+            
+                <div class="col-lg-4 col-md-4 col-sm-12 mt-3" >
+                    
+                    <div class="card" style="background-color: rgba(177, 182, 182, 0.4);">
+                        <h5 class="card-title mt-3">Teacher</h5>
+                        <hr>
+                        <img src="images/teacher1.jfif " style="height:250px; opacity: 0.5" class="card-img-top" alt="...">
+                        
+                        <div class="card-body">
+                            <p class="card-text"><strong>If you are Teacher of the institute so click belowor or sign up</strong></p>
+                        
+                            <button class="btn">
+                                <a href="#" class="btn btn-info" data-toggle="modal" data-target="#signin12">Sign In</a>
+                            </button>
+                            <button class="btn">
+                                <a href="#" class="btn  btn-info" data-toggle="modal" data-target="#signup12">Sign Up</a>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12 mt-3" >
+
+                    <div class="card" style="background-color: rgba(177, 182, 182, 0.4);">
+                        <h5 class="card-title mt-3">Graphic Designer</h5>
+                        <hr>
+                        <img src="images/graphic.jfif" style="height: 250px; opacity: 0.5" class="card-img-top" alt="...">
+                        
+                        <div class="card-body">
+                            <p class="card-text"><strong>If you are student of Grphic Design so click below sign in or sign up</strong></p>
+                            <button class="btn">
+                                <a href="#" class="btn  btn-info" data-toggle="modal" data-target="#signin12">Sign In</a>
+                            </button>
+                            <button class="btn">
+                                <a href="#" class="btn  btn-info" data-toggle="modal" data-target="#signup12">Sign Up</a>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                
+            <!-- </div> -->
+            <!-- End row -->
+        </div>
+    </div>
+    <!-- End container -->
+
+<!-- singup modal box -->
+    <div class="container-fluid text-center ">
+        <div class="modal fade " id="signup12" style="background-color: rgba(37, 228, 241, 0.5);">
+            <div class="modal-dialog modal-md modal-dialog-centered ">
+                <div class="modal-content" style="background-color: rgba(233, 234, 235, 0.5);">
+                    <div class="modal-header">
+                        <!-- <h1 class="modal-title"><font class="text-warning">Sf</font>CodeB<i class="far fa-heart h3 text-warning"></i>t</h1> -->
+                        <img src="images/download1.png" style=" height: 100px; " alt="" class="modal-title text-center">
+                        <button class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <h5>Registration form</h5>
+
+                    <div class="modal-body">
+                        <form action="#" class="form p-2 ">
+
+                    
+                            <input type="text" class="form-control mt-2" id="username" placeholder="User Name" name="username" required>
+                       
+                            <input type="email" class="form-control mt-2" id="email" placeholder="Enter The Email" name="email" required>
+                        
+                            <input type="password" class="form-control mt-2" id="password" placeholder="Enter password" name="password" required>
+                              
+                            <input type="password" class="form-control mt-2" id="confirmpassword" placeholder="Enter Confirm password" name="password" required>
+                            
+                      
+                            <label for="selection" >Select</label>
+                            <select name="type" class="custom-select form-control w-100 text-center mt-2" id="type">
+                                <option value="">Select</option>
+                                <option value="classTeacher">Class Teacher</option>
+                                <option value="web">Web Developer</option>
+                                <option value="graphic">Graphic Desgin</option>
+                            </select>
+                            
+                            <div class="text-center">
+                                <button onclick="registered()" type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#MyModal">Registered</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal">close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- singup modal box -->
+
+    <!-- sing in modal box -->
+    <div class="container-fluid">
+        <div class="modal fade" id="signin12" style="background-color: rgba(37, 228, 241, 0.5);">
+            <div class="modal-dialog modal-md modal-dialog-centered">
+                <div class="modal-content " style="background-color: rgba(233, 234, 235, 0.5);">
+                    <div class="modal-header">
+                        <!-- <h1 class="modal-title"><font class="text-warning">Sf</font>CodeB<i class="far fa-heart h3 text-warning"></i>t</h1> -->
+                        <img src="images/download1.png" style=" height: 100px; " alt="" class="modal-title text-center">
+                        <button class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <h5 class="text-center">Login in form</h5>
+
+                    <div class="modal-body">
+                        <form action="#" class="form p-2 ">
+
+                    
+                            <h5>Enter The Email</h5>
+                            <input type="email" class="form-control mt-2" id="email" placeholder="Enter The Email" name="email" required>
+                        
+                            <h5>Enter The Password</h5>
+                            <input type="password" class="form-control mt-2" id="password" placeholder="Enter password" name="password" required>
+                              
+                                                                                                    
+                            <div class="text-center">
+                                <button onclick="signin()" type="button" class="btn btn-dark mt-2" data-toggle="modal" data-target="#MyModal">Sign in</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn" data-dismiss="modal">close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- singup modal box -->
+    <script src="../registration/registration.js"></script>
+    <script src="../sign in/signin.js"></script>
+    <!-- <a href="../registration/registration.js"></a> -->
+</body>
+</html>

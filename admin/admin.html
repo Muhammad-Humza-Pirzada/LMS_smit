@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+ 
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Admin</title>
+
+ </head>
+
+ 
+
+<body>
+
+ 
+
+  <div>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+
+    <!-- authentication -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+
+    <!-- database -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+
+    <!-- Storage -->
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+
+ 
+
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAFJFmzKwCADs9lnn3-58eZU1qvvrtBnpk",
+            authDomain: "lms-smit.firebaseapp.com",
+            projectId: "lms-smit",
+            storageBucket: "lms-smit.appspot.com",
+            messagingSenderId: "634965974416",
+            appId: "1:634965974416:web:22a46fbe6147c1f34ca715",
+            measurementId: "G-ZBF4NNQM8M"
+        };
+    
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        // const analytics = getAnalytics(app);
+       
+    </script>
+
+  </div>
+
+  
+
+  <div class="sidebar">
+
+    <!-- <a href="../admin.html">Personal Info...</a> -->
+
+    <!-- <a class="active" href="control/control.html">Control</a> -->
+
+ 
+
+  </div>
+
+ 
+
+  <div class="content">
+
+ 
+
+    <h1>Select-One</h1>
+
+ 
+
+    <select id="control" onchange="select(this)">
+
+      <option value="">none</option>
+
+      <option value="classTeacher">Teachers</option>
+
+      <option value="web">Web Design</option>
+
+      <option value="graphic">Graphic Design</option>
+
+ 
+
+    </select>
+
+
+
+
+
+
+
+  </div>
+
+ 
+
+  <div class="content tableContent" style="overflow: auto;">
+
+    <table border="1" id="table">
+
+ 
+
+    </table>
+
+  </div>
+
+  
+  
+
+ 
+
+  <div class="editContent content" id="edit">
+
+
+  </div>
+  <div id="form">
+    
+
+  </div>
+
+
+
+
+</body>
+
+ 
+
+<script src="admin.js"></script>
+
+ 
+
+</html>
